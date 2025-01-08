@@ -1,2 +1,6 @@
 # Ignore the .env directory and its contents
 .env/
+
+project_structure.txt
+
+tree.py
