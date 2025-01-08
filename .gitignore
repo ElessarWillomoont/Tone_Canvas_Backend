@@ -1,5 +1,6 @@
 # Ignore the .env directory and its contents
 .env/
+__pycache__/
 
 project_structure.txt
 
