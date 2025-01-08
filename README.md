@@ -1,6 +1,3 @@
-### README.md
-
-```markdown
 # Tone Canvas Backend
 
 This project is a Flask-based backend for handling tone-related audio files, processing pitch data, and managing user interactions. The backend provides APIs for handling `.wav` files, pitch processing, trace recording, and more. 
@@ -192,16 +189,3 @@ Contributions are welcome! Please follow these steps:
 
 ## License
 This project is licensed under the Apache2.0 License. See the LICENSE file for details.
-```
-
-### Features of the README
-1. **Setup Instructions**:
-   - Includes local and Docker-based setup.
-2. **API Documentation**:
-   - Describes each API endpoint with expected input and output.
-3. **Project Structure**:
-   - Highlights file organization for maintainability.
-4. **Key Features**:
-   - Emphasizes modularity and functionality.
-
-If you need adjustments or additional sections, let me know!
