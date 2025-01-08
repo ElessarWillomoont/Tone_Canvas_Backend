@@ -154,5 +154,39 @@ def send_trace():
 
     return jsonify(message="Trace data appended to YAML file."), 201
 
+@app.route('/api/send-button-log', methods=['POST'])
+def send_button_log():
+    global current_data_file
+
+    if not current_data_file:
+        return jsonify(error="No current data file. Set user ID first."), 400
+
+    button_name = request.json.get('button_name')
+    if not button_name:
+        return jsonify(error="Button name is required."), 400
+
+    current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    with open(current_data_file, 'a') as yaml_file:
+        yaml.dump({
+            "button_logs": [{
+                "button_name": button_name,
+                "timestamp": current_time
+            }]
+        }, yaml_file)
+
+    return jsonify(message="Button log appended to YAML file."), 201
+
+@app.route('/api/get-progress', methods=['GET'])
+def get_progress():
+    global current_index
+
+    total_files = len(files)
+
+    return jsonify({
+        "total_files": total_files,
+        "current_index": current_index
+    }), 200
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
