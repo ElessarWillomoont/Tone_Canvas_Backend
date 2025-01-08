@@ -76,5 +76,14 @@ def get_pitch_audio():
     
     return send_file(audio_output_path, as_attachment=True)
 
+@app.route('/api/get-file-name', methods=['GET'])
+def get_file_name():
+    global current_index
+    if not files:
+        return jsonify(error="No wav files found"), 404
+
+    file_name = files[current_index]
+    return jsonify(fileName=file_name)
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
