@@ -114,5 +114,45 @@ def send_user_id():
 
     return jsonify(message=f"Current data file set to: {current_data_file}"), 201
 
+@app.route('/api/send-trace', methods=['POST'])
+def send_trace():
+    global current_data_file, current_index
+
+    if not current_data_file:
+        return jsonify(error="No current data file. Set user ID first."), 400
+
+    trace = request.json.get('trace')
+    if not trace:
+        return jsonify(error="Trace data is required."), 400
+
+    trace_start = trace.get('trace_start')
+    trace_body = trace.get('trace_body')
+    trace_end = trace.get('trace_end')
+
+    if not (trace_start and trace_body and trace_end):
+        return jsonify(error="Trace data must include trace_start, trace_body, and trace_end."), 400
+
+    current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+    current_file_name = files[current_index] if current_index < len(files) else "unknown"
+
+    with open(current_data_file, 'a') as yaml_file:
+        yaml.dump({
+            f"trace_{current_time}": {
+                "file_name": current_file_name,
+                "trace_start": trace_start,
+                "trace_body": [
+                    {
+                        "timestamp": point["timestamp"],
+                        "pitch": point["pitch"],
+                        "x": point["x"],
+                        "y": point["y"]
+                    } for point in trace_body
+                ],
+                "trace_end": trace_end
+            }
+        }, yaml_file)
+
+    return jsonify(message="Trace data appended to YAML file."), 201
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
