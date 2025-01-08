@@ -2,6 +2,8 @@ from flask import Flask, send_from_directory, jsonify, request, send_file
 from flask_cors import CORS
 import os
 import soundfile as sf
+import yaml
+from datetime import datetime
 
 from utils.pitch_processing import process_pitch_file, save_interpolated_data_to_json, generate_sine_wave
 from utils.file_parsing import parse_praat_pitch_file
@@ -13,12 +15,18 @@ CORS(app)  # Enable CORS
 corpus_dir = os.path.join(os.path.dirname(__file__), 'corpus')
 icons_dir = os.path.join(os.path.dirname(__file__), 'icons')
 temp_dir = os.path.join(os.path.dirname(__file__), 'temp')
+data_base_dir = os.path.join(os.path.dirname(__file__), 'data_base')
 
 if not os.path.exists(temp_dir):
     os.makedirs(temp_dir)
 
+if not os.path.exists(data_base_dir):
+    os.makedirs(data_base_dir)
+
 files = [f for f in os.listdir(corpus_dir) if f.endswith('.wav')]
 current_index = 0
+user_id = None
+current_data_file = None
 
 @app.route('/api/get-wav-file', methods=['GET'])
 def get_wav_file():
@@ -84,6 +92,27 @@ def get_file_name():
 
     file_name = files[current_index]
     return jsonify(fileName=file_name)
+
+@app.route('/api/send-user-id', methods=['POST'])
+def send_user_id():
+    global user_id, current_data_file
+
+    user_id = request.json.get('user_id')
+    if not user_id:
+        return jsonify(error="User ID is required"), 400
+
+    current_time = datetime.now().strftime("%Y%m%d_%H%M")
+    user_file_path = os.path.join(data_base_dir, f"{user_id}.yaml")
+
+    if os.path.exists(user_file_path):
+        current_data_file = user_file_path
+    else:
+        new_file_name = f"{user_id}_{current_time}.yaml"
+        current_data_file = os.path.join(data_base_dir, new_file_name)
+        with open(current_data_file, 'w') as yaml_file:
+            yaml.dump({"user_id": user_id, "created_at": current_time}, yaml_file)
+
+    return jsonify(message=f"Current data file set to: {current_data_file}"), 201
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

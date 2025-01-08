@@ -2,6 +2,7 @@
 .env/
 __pycache__/
 temp/
+data_base/
 
 project_structure.txt
 
