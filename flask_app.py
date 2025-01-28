@@ -1,4 +1,4 @@
-from flask import Flask, send_from_directory, jsonify, request, send_file
+from flask import Flask, send_from_directory, jsonify, request
 from flask_cors import CORS
 import os
 import yaml
@@ -11,7 +11,9 @@ from utils.pitch_handling import handle_get_pitch_json, handle_get_pitch_audio
 from utils.trace_handling import handle_send_trace, handle_send_button_log
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS
+
+# Enable CORS with specific configuration
+CORS(app, resources={r"/api/*": {"origins": ["http://100.65.232.106:3000", "http://localhost:3000"]}})
 
 corpus_dir = os.path.join(os.path.dirname(__file__), 'corpus')
 icons_dir = os.path.join(os.path.dirname(__file__), 'icons')
