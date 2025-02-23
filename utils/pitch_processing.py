@@ -42,8 +42,8 @@ def process_pitch_file(file_path, target_sample_rate):
         times = [t - times[0] for t in times]
     
     # Print trimmed values for debugging
-    print(f"Trimmed and normalized times: {times[:10]}")
-    print(f"Trimmed frequencies: {primary_frequencies[:10]}")
+    # print(f"Trimmed and normalized times: {times[:10]}")
+    # print(f"Trimmed frequencies: {primary_frequencies[:10]}")
     
     # Segment non-zero frequency regions for better interpolation
     segments = segment_nonzero_times_and_frequencies(times, primary_frequencies)

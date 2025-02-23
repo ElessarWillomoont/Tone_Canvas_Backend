@@ -19,6 +19,8 @@ corpus_dir = os.path.join(os.path.dirname(__file__), 'corpus')
 icons_dir = os.path.join(os.path.dirname(__file__), 'icons')
 temp_dir = os.path.join(os.path.dirname(__file__), 'temp')
 data_base_dir = os.path.join(os.path.dirname(__file__), 'data_base')
+UPLOAD_FOLDER = os.path.join(os.path.dirname(__file__), 'uploads')
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 if not os.path.exists(temp_dir):
     os.makedirs(temp_dir)
@@ -112,6 +114,43 @@ def get_progress():
         "total_files": total_files,
         "current_index": current_index
     }), 200
+
+@app.route('/api/upload-audio', methods=['POST'])
+def upload_audio():
+    global current_data_file, user_id
+
+    if "audio" not in request.files:
+        return jsonify(error="No audio file provided"), 400
+    
+    if not user_id or not current_data_file:
+        return jsonify(error="User ID and data file are required before uploading"), 400
+
+    file = request.files["audio"]
+    if file.filename == '':
+        return jsonify(error="Empty filename"), 400
+    
+    # 确定用户目录
+    user_upload_dir = os.path.join(UPLOAD_FOLDER, user_id)
+    os.makedirs(user_upload_dir, exist_ok=True)
+
+    # 计算音频序号
+    existing_files = [f for f in os.listdir(user_upload_dir) if f.endswith(".wav") or f.endswith(".mp3")]
+    file_index = len(existing_files) + 1  # 递增序号
+
+    # 生成文件名
+    current_time = datetime.now().strftime("%Y%m%d_%H%M")
+    base_filename = f"{user_id}_{os.path.basename(current_data_file).replace('.yaml', '')}_{file_index}"
+    wav_filename = f"{base_filename}.wav"
+    mp3_filename = f"{base_filename}.mp3"
+
+    # 保存 WAV 文件
+    wav_path = os.path.join(user_upload_dir, wav_filename)
+    file.save(wav_path)
+
+    return jsonify({
+        "message": "Upload successful",
+        "wav_file": wav_filename,
+    }), 201
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
