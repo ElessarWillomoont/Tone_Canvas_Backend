@@ -13,7 +13,7 @@ from utils.trace_handling import handle_send_trace, handle_send_button_log
 app = Flask(__name__)
 
 # Enable CORS with specific configuration
-CORS(app, resources={r"/api/*": {"origins": ["http://100.65.232.106:3000", "http://localhost:3000"]}})
+CORS(app, resources={r"/api/*": {"origins": ["http://100.65.232.106:3000", " https://740d-88-173-177-226.ngrok-free.app"]}})
 
 corpus_dir = os.path.join(os.path.dirname(__file__), 'corpus')
 icons_dir = os.path.join(os.path.dirname(__file__), 'icons')

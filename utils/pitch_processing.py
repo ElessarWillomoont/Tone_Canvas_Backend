@@ -25,6 +25,12 @@ def process_pitch_file(file_path, target_sample_rate):
     # Parse pitch file to extract frames and timing information
     frames_data, x1, dx = parse_praat_pitch_file(file_path)
     times = calculate_times(frames_data, x1, dx)
+    
+    # Ensure times is not empty
+    if len(times) == 0:
+        print("Error: No valid time data found in pitch file.")
+        return np.array([]), np.array([])
+
     primary_frequencies = [frame['candidates'][0]['frequency'] for frame in frames_data]
     
     # Print initial values for debugging
@@ -40,13 +46,15 @@ def process_pitch_file(file_path, target_sample_rate):
     # Normalize time axis to start from zero
     if times:
         times = [t - times[0] for t in times]
-    
-    # Print trimmed values for debugging
-    # print(f"Trimmed and normalized times: {times[:10]}")
-    # print(f"Trimmed frequencies: {primary_frequencies[:10]}")
-    
+
     # Segment non-zero frequency regions for better interpolation
     segments = segment_nonzero_times_and_frequencies(times, primary_frequencies)
+    
+    # Ensure segments are not empty
+    if not segments:
+        print("Warning: No valid segments found, returning empty arrays.")
+        return np.array([]), np.array([])
+
     all_new_times, all_interpolated_frequencies = interpolate_pitch_segments(segments, target_sample_rate)
     
     # Initialize output arrays
@@ -56,6 +64,10 @@ def process_pitch_file(file_path, target_sample_rate):
     
     # Process each interpolated segment and fill gaps with zero frequency
     for new_times, interpolated_frequencies in zip(all_new_times, all_interpolated_frequencies):
+        if len(new_times) == 0:  # 确保 new_times 非空
+            print("Warning: Encountered empty new_times, skipping this segment.")
+            continue  # 跳过这个空段
+        
         if previous_end_time is not None and new_times[0] > previous_end_time:
             zero_times = np.arange(previous_end_time, new_times[0], 1/target_sample_rate)
             combined_times.extend(zero_times)

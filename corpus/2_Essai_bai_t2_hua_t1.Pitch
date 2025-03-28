@@ -2,10 +2,10 @@ File type = "ooTextFile"
 Object class = "Pitch 1"
 
 xmin = 0 
-xmax = 1.15702947845805 
-nx = 74 
+xmax = 1.3392063492063493 
+nx = 86 
 dx = 0.015 
-x1 = 0.031014739229025028 
+x1 = 0.032103174603174627 
 ceiling = 500 
 maxnCandidates = 2 
 frames []: 
@@ -52,53 +52,38 @@ frames []:
                 frequency = 0 
                 strength = 0.4 
     frames [7]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 314.90135259960266 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [8]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 310.32949636858416 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [9]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 306.3887757578056 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [10]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 304.37539937302216 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [11]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 302.59349765085324 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [12]:
@@ -106,7 +91,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 299.01563470553896 
+                frequency = 192.28058454107693 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -116,7 +101,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 292.70364724553343 
+                frequency = 191.54544647161617 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -126,7 +111,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 283.57123496713234 
+                frequency = 190.67489959605703 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -136,7 +121,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 271.6397674252627 
+                frequency = 189.8501882690331 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -146,7 +131,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 257.7247760526216 
+                frequency = 189.2387790734248 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -156,7 +141,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 243.34922163874256 
+                frequency = 188.98083773610824 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -166,7 +151,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 229.65121900734653 
+                frequency = 189.12141012690773 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -176,7 +161,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 217.7471703853734 
+                frequency = 189.56800884063148 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -186,7 +171,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 208.58325451809597 
+                frequency = 190.17737839967245 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -196,7 +181,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 202.16726492053743 
+                frequency = 190.89972711890323 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -206,7 +191,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 197.59585556605793 
+                frequency = 191.86520106371938 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -216,100 +201,139 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 194.652028034642 
+                frequency = 193.3814822952024 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [24]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 195.84250611041162 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [25]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 199.6001972293811 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [26]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 204.92235088092863 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [27]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 211.99555004040982 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [28]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 220.77995897736776 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [29]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 230.81064033351493 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [30]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 241.2333893592113 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [31]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 250.99659717271058 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [32]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 259.0014821965108 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [33]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 264.41498667689234 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [34]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 267.20510154771455 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [35]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 268.2798845627071 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [36]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 268.83337397027685 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [37]:
@@ -348,43 +372,31 @@ frames []:
                 frequency = 0 
                 strength = 0.4 
     frames [42]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 197.03637452090118 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [43]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 187.75540414855442 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [44]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 177.12577022444742 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [45]:
-        intensity = 1 
-        nCandidates = 2 
+        intensity = 0 
+        nCandidates = 1 
         candidates []: 
             candidates [1]:
-                frequency = 169.73302698486788 
-                strength = 0.9 
-            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [46]:
@@ -430,10 +442,13 @@ frames []:
                 frequency = 0 
                 strength = 0.4 
     frames [52]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 281.64066002234244 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [53]:
@@ -441,16 +456,19 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 141.9310131616528 
+                frequency = 280.21528330905835 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [54]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 278.396671045101 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [55]:
@@ -458,16 +476,19 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 133.56626215861286 
+                frequency = 276.902667782132 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [56]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 276.04036298244375 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [57]:
@@ -475,7 +496,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 167.4278713132111 
+                frequency = 275.70761530086827 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -485,7 +506,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 178.49475951452297 
+                frequency = 275.6937789977782 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -495,7 +516,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 181.95889743375915 
+                frequency = 275.85252900313304 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -505,7 +526,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 181.93473657762172 
+                frequency = 276.05023580048504 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -515,7 +536,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 180.75661831560268 
+                frequency = 276.09886765831686 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -525,7 +546,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 180.01652102659 
+                frequency = 275.86913905145167 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -535,7 +556,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 180.89019681456833 
+                frequency = 275.42499359181573 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -545,7 +566,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 183.67972743980238 
+                frequency = 274.96050822101046 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -555,7 +576,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 187.62139232281336 
+                frequency = 274.6162330074378 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -565,7 +586,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 192.14282131860196 
+                frequency = 274.4022814777799 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -575,7 +596,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 197.952779834858 
+                frequency = 274.3283345424053 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -585,7 +606,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 205.3500988274287 
+                frequency = 274.5694545578014 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -595,7 +616,7 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 212.7205083414519 
+                frequency = 275.4320247557125 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
@@ -605,33 +626,135 @@ frames []:
         nCandidates = 2 
         candidates []: 
             candidates [1]:
-                frequency = 217.87891615018856 
+                frequency = 277.1448606186824 
                 strength = 0.9 
             candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [71]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 279.6992455175693 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [72]:
-        intensity = 0 
-        nCandidates = 1 
+        intensity = 1 
+        nCandidates = 2 
         candidates []: 
             candidates [1]:
+                frequency = 282.85358782333697 
+                strength = 0.9 
+            candidates [2]:
                 frequency = 0 
                 strength = 0.4 
     frames [73]:
+        intensity = 1 
+        nCandidates = 2 
+        candidates []: 
+            candidates [1]:
+                frequency = 286.1847999087345 
+                strength = 0.9 
+            candidates [2]:
+                frequency = 0 
+                strength = 0.4 
+    frames [74]:
+        intensity = 1 
+        nCandidates = 2 
+        candidates []: 
+            candidates [1]:
+                frequency = 289.0987299231257 
+                strength = 0.9 
+            candidates [2]:
+                frequency = 0 
+                strength = 0.4 
+    frames [75]:
+        intensity = 1 
+        nCandidates = 2 
+        candidates []: 
+            candidates [1]:
+                frequency = 291.0253551250238 
+                strength = 0.9 
+            candidates [2]:
+                frequency = 0 
+                strength = 0.4 
+    frames [76]:
+        intensity = 1 
+        nCandidates = 2 
+        candidates []: 
+            candidates [1]:
+                frequency = 291.8503953214571 
+                strength = 0.9 
+            candidates [2]:
+                frequency = 0 
+                strength = 0.4 
+    frames [77]:
         intensity = 0 
         nCandidates = 1 
         candidates []: 
             candidates [1]:
                 frequency = 0 
                 strength = 0.4 
-    frames [74]:
+    frames [78]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [79]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [80]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [81]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [82]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [83]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [84]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [85]:
+        intensity = 0 
+        nCandidates = 1 
+        candidates []: 
+            candidates [1]:
+                frequency = 0 
+                strength = 0.4 
+    frames [86]:
         intensity = 0 
         nCandidates = 1 
         candidates []: 
