@@ -2,6 +2,7 @@ from flask import Flask, send_from_directory, jsonify, request
 from flask_cors import CORS
 import os
 import yaml
+import random
 from datetime import datetime
 
 from utils.pitch_processing import process_pitch_file, save_interpolated_data_to_json, generate_sine_wave
@@ -13,7 +14,12 @@ from utils.trace_handling import handle_send_trace, handle_send_button_log
 app = Flask(__name__)
 
 # Enable CORS with specific configuration
-CORS(app, resources={r"/api/*": {"origins": ["http://100.65.232.106:3000", " https://740d-88-173-177-226.ngrok-free.app"]}})
+CORS(app, resources={r"/api/*": {"origins": [
+    "http://localhost:3000",
+    "https://740d-88-173-177-226.ngrok-free.app",
+    "https://f650-2a01-e0e-1002-7bbe-e97-f8eb-b354-d8c6.ngrok-free.app",
+    "https://tone-canvasv2.vercel.app"
+]}})
 
 corpus_dir = os.path.join(os.path.dirname(__file__), 'corpus')
 icons_dir = os.path.join(os.path.dirname(__file__), 'icons')
@@ -28,7 +34,22 @@ if not os.path.exists(temp_dir):
 if not os.path.exists(data_base_dir):
     os.makedirs(data_base_dir)
 
-files = [f for f in os.listdir(corpus_dir) if f.endswith('.wav')]
+# 🧠 文件排序逻辑修改区域
+all_files = [f for f in os.listdir(corpus_dir) if f.endswith('.wav')]
+aa_files = sorted([f for f in all_files if f.startswith("AA")])
+other_files = [f for f in all_files if not f.startswith("AA")]
+
+if len(other_files) > 2:
+    fixed_part = other_files[:2]  # 保留前两个不变
+    random_part = other_files[2:]  # 后面的打乱
+    random.shuffle(random_part)
+    other_files = fixed_part + random_part
+else:
+    random.shuffle(other_files)
+
+files = aa_files + other_files
+
+# 其余状态初始化
 current_index = 0
 user_id = None
 current_data_file = None
